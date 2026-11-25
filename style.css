@@ -1,0 +1,144 @@
+
+:root{
+    --blue-500:hsl(215, 51%, 70%);
+    --cyan-400:hsl(178, 100%, 50%);
+
+    --main-BG:hsl(217, 54%, 11%);
+    --card-BG:hsl(216, 50%, 16%);
+    --text-color:hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    /* height: 100vw; */
+    min-height: 100vh;
+    padding: 10px;
+    display: flex;
+    /* overflow: hidden; */
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-BG);
+}
+
+hr{
+    border: 1px solid var(--text-color);
+}
+
+
+div.main{
+    width: 320px;
+    height: 550px;
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: var(--card-BG);
+}
+
+div.main > div.box{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+div.main > div.box > img{
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+div.main > div.box > div.in-box{
+    inset: 0;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    background-color: var(--cyan-400);
+    transition: opacity 1s ease;
+}
+div.main > div.box > div.in-box:hover{
+    opacity: 0.4
+}
+
+div.main > div.box > div.in-box > img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    border-radius: 10px;
+    margin: 50% 0 0 50% ;
+    transform: translate(-50% ,-50%);
+}
+
+div.main > div.content > h1{
+    width: fit-content;
+    margin: 20px 0 ;
+    font-size: 22px;
+    color: var(--white);
+    transition: color 2s;
+}
+div.main > div.content > h1:hover{
+    color: var(--cyan-400);
+    cursor: pointer;
+}
+
+div.main > div.content > p{
+    margin: 20px 0 ;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--blue-500);
+}
+
+div.main > div.content > div.price-time{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+div.main > div.content > div.price-time > div.DIM span{
+    color: var(--cyan-400);
+    font-weight: 300;
+}
+
+div.main > div.content > div.price-time > div.time span{
+    color: var(--blue-500);
+    font-weight: 300;
+}
+
+div.main > div.content > div.footer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    margin: 20px 0 10px 0;
+}
+
+div.main > div.content > div.footer > img {
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+div.main > div.content > div.footer > p {
+    color: var(--blue-500);
+}
+
+div.main > div.content > div.footer > p > span {
+    color: var(--white);
+    transition-duration: 2s;
+}
+div.main > div.content > div.footer > p > span:hover {
+    color: var(--cyan-400);
+    cursor: pointer;
+}
